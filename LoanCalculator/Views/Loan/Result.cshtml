@@ -1,0 +1,12 @@
+@model LoanCalculator.Models.Loan
+
+<h2>Loan Payment Result</h2>
+
+<div>
+    <p>Loan Amount: @Model.LoanAmount.ToString("C")</p>
+    <p>Interest Rate: @Model.InterestRate %</p>
+    <p>Loan Term: @Model.LoanTerm years</p>
+    <p><strong>Monthly Payment: @Model.MonthlyPayment.ToString("C")</strong></p>
+</div>
+
+<a href="@Url.Action("Index")" class="btn btn-secondary">Calculate Another Loan</a>

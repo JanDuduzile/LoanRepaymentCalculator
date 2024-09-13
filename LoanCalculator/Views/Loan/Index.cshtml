@@ -1,0 +1,21 @@
+@model LoanCalculator.Models.Loan
+
+<h2>Loan Calculator</h2>
+<p>Interest rate is 25% per month.</p>
+<br/>
+<form asp-action="Calculate" method="post">
+    <div class="form-group">
+        <label asp-for="LoanAmount"></label>
+        <input asp-for="LoanAmount" class="form-control" />
+        <span asp-validation-for="LoanAmount" class="text-danger"></span>
+    </div>
+    <br/>
+    <div class="form-group">
+        <label asp-for="LoanTerm"></label>
+        <input asp-for="LoanTerm" class="form-control" />
+        <span asp-validation-for="LoanTerm" class="text-danger"></span>
+    </div>
+    <br/>
+    <br/>
+    <button type="submit" class="btn btn-primary">Calculate</button>
+</form>
